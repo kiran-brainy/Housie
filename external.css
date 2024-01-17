@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(82, 79, 79);
+}
+.tab-1{
+    margin-top: 100px;
+    width:100px;
+    border:1px rgb(173, 170, 170) solid;
+    padding: 0px;
+    border-spacing:0px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    margin-left:10px ;    
+}
+td[id^="slot"]
+{
+    padding: 35px;
+    border:1px solid white;
+    border-radius: 10px;
+}
+.sec{
+    border: 1px solid white;
+    float: right;
+    position: relative;
+    top:100px;
+    width:34.8%;
+    height: 920px;
+    margin-right: 20px;
+    text-align: center;
+}
+#s-main{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:50px;
+    color: white;
+}
+#s-sec{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:250px;
+    color: white;
+}
+.round{
+    margin-top: 50%;
+}
+#b2,#b1{
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    color: black;
+    font-size: 20px;
+    margin-left:10px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border:3px solid black;
+    background-color:rgb(82, 79, 79) ;
+}
+#b1:hover,#b2:hover{
+    border: 5px solid black;
+}
+#b2:active,#b1:active{
+    transform: scale(0.9);
+}
+.check
+{
+    position: relative;
+    border:1px solid whitesmoke;
+}
