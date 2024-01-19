@@ -258,12 +258,14 @@
          </table>
          </div>         
          <script>
+            var glo=0
        function change()
          {
+            count()
             let o=0
-            o=o+1
+            o=o+glo
             let r=Math.floor(Math.random() * 10);
-          console.log(r)
+            console.log(r)
             document.getElementById("s-sec").innerHTML=r
             let k="slot-"+r
             document.getElementById(k).style.backgroundColor="green"
@@ -271,8 +273,14 @@
             console.log(c)
             document.getElementById(c).innerHTML=r
             document.getElementById(c).style.backgroundColor="green"
-            document.getElementById(c).style.height="45px";
-            document.getElementById(c).style.width="50px";
+            document.getElementById(c).style.height="47px";
+            document.getElementById(c).style.width="51px";
+           
+            console.log(glo)
+         }
+         function count()
+         {
+            glo=glo+1;
          }
        </script>
      </body>

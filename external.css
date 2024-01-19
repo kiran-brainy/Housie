@@ -63,13 +63,13 @@ td[id^="slot"]
     margin-top: 50px;
     border: 1px solid white;
     display: inline-block;
-    height: 300px ;
+    height:310px ;
     width: 95%;
     margin-left: 2%;
 }
 .checker{
-    width: 100%;
-    height: 100%;
+    width:100%;
+    height:100%;
     text-align: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
     padding: 5px;
