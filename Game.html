@@ -107,14 +107,14 @@
          </tr>
          <tr class="row-7">
             <td id="slot-8">8</td>
-            <td id="slot-18">72</td>
-            <td id="slot-28">73</td>
-            <td id="slot-38">74</td>           
-            <td id="slot-48">75</td>
-            <td id="slot-58">76</td>
-            <td id="slot-68">77</td>
+            <td id="slot-18">12</td>
+            <td id="slot-28">23</td>
+            <td id="slot-38">34</td>           
+            <td id="slot-48">45</td>
+            <td id="slot-58">56</td>
+            <td id="slot-68">67</td>
             <td id="slot-78">78</td>
-            <td id="slot-88">79</td>
+            <td id="slot-88">88</td>
             <td id="slot-98">80</td>
          </tr>
          <tr class="row-8">
@@ -259,12 +259,7 @@
          </div>         
          <script>
          function create(){
-            let arr= new Array()
-         for(let i=1;i<=100;i++)
-         {
-             arr.push(i)
-         }
-         let ele = arr[Math.floor(Math.random() * arr.length)]
+         
         console.log(ele)     
       }
             var glo=0
@@ -273,18 +268,22 @@
             count()
             let o=0
             o=o+glo
-            let r=Math.floor(Math.random() * 10);
-            console.log(r)
-            document.getElementById("s-sec").innerHTML=r
-            let k="slot-"+r
+            let arr= new Array()
+            for(let i=1;i<=100;i++)
+            {
+             arr.push(i)
+            }
+            let ele = arr[Math.floor(Math.random() * arr.length)]
+            console.log(ele)
+            document.getElementById("s-sec").innerHTML=ele
+            let k="slot-"+ele
             document.getElementById(k).style.backgroundColor="green"
             let c="chk-slot-"+o
             console.log(c)
-            document.getElementById(c).innerHTML=r
+            document.getElementById(c).innerHTML=ele
             document.getElementById(c).style.backgroundColor="green"
             document.getElementById(c).style.height="47px";
             document.getElementById(c).style.width="51px";
-           
             console.log(glo)
          }
          function count()
