@@ -220,7 +220,7 @@
              <td id="chk-slot-66"></td>
              <td id="chk-slot-67"></td>
              <td id="chk-slot-68"></td>
-             <td id="chk-slot-6"></td>
+             <td id="chk-slot-69"></td>
              <td id="chk-slot-70"></td>
              <td id="chk-slot-71"></td>
              <td id="chk-slot-72"></td>
@@ -258,33 +258,43 @@
          </table>
          </div>         
          <script>
-         function create(){
-         
-        console.log(ele)     
-      }
+           let arr=new Array()
+           let arr1=new Array()
+           window.onload=myarray()
+           function myarray()
+           {
+            for(let i=1;i<=100;i++)
+            {
+              arr.push(i)
+            }
+           }
+           function remove(ele)
+           {
+            let k=arr.indexOf(ele)
+            console.log(k)
+            let m=arr.splice(k,1)
+            console.log("==========")
+            console.log()
+            console.log("==========")
+            arr1.push(m)
+            console.log(arr1)
+           }
             var glo=0
        function change()
          {
             count()
             let o=0
             o=o+glo
-            let arr= new Array()
-            for(let i=1;i<=100;i++)
-            {
-             arr.push(i)
-            }
             let ele = arr[Math.floor(Math.random() * arr.length)]
-            console.log(ele)
             document.getElementById("s-sec").innerHTML=ele
             let k="slot-"+ele
             document.getElementById(k).style.backgroundColor="green"
             let c="chk-slot-"+o
-            console.log(c)
             document.getElementById(c).innerHTML=ele
             document.getElementById(c).style.backgroundColor="green"
             document.getElementById(c).style.height="47px";
             document.getElementById(c).style.width="51px";
-            console.log(glo)
+            remove(ele)
          }
          function count()
          {
