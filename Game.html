@@ -111,7 +111,7 @@
             <td id="slot-28">23</td>
             <td id="slot-38">34</td>           
             <td id="slot-48">45</td>
-            <td id="slot-58">56</td>
+            <td id="slot-58">58</td>
             <td id="slot-68">67</td>
             <td id="slot-78">78</td>
             <td id="slot-88">88</td>
@@ -283,6 +283,12 @@
        function change()
          {
             count()
+            if(arr.length==0)
+            {
+               alert("Game Over")
+               confirm("Are you sure want to close the game")
+               history.go()
+            }
             let o=0
             o=o+glo
             let ele = arr[Math.floor(Math.random() * arr.length)]
