@@ -286,8 +286,11 @@
             if(arr.length==0)
             {
                alert("Game Over")
-               confirm("Are you sure want to close the game")
-               history.go()
+               let r=confirm("Are you sure want to close the game")
+               if(r===true)
+               {
+                  history.go()
+               }
             }
             let o=0
             o=o+glo
