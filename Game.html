@@ -15,7 +15,7 @@
             </div>
             <div class="buttons">
            <input type="button" value="Next" id="b1" onclick="change()">
-           <input type="button" value="Undo" id="b2" onclick="create()">
+           <input type="button" value="Undo" id="b2" onclick="undo()">
             </div>
          </div>
       </div>
@@ -112,7 +112,7 @@
             <td id="slot-38">34</td>           
             <td id="slot-48">45</td>
             <td id="slot-58">58</td>
-            <td id="slot-68">67</td>
+            <td id="slot-68">68</td>
             <td id="slot-78">78</td>
             <td id="slot-88">88</td>
             <td id="slot-98">80</td>
@@ -258,9 +258,27 @@
          </table>
          </div>         
          <script>
+            let ind
+           let k
+           let c
+           let o
+           let ele
            let arr=new Array()
            let arr1=new Array()
            window.onload=myarray()
+           function undo()
+           {
+            let t=arr1.pop()
+            arr.splice(ind,0,t)
+            buffer(glo,o)
+           }
+           function buffer(glo,o)
+           {
+             let c1="slot-"+glo
+             let c2="chk-slot-"+o
+            document.getElementById(c2).style.backgroundColor="grey"
+            document.getElementById(c1).style.backgroundColor="grey"
+           }
            function myarray()
            {
             for(let i=1;i<=100;i++)
@@ -270,14 +288,9 @@
            }
            function remove(ele)
            {
-            let k=arr.indexOf(ele)
-            console.log(k)
+             ind=arr.indexOf(ele)
             let m=arr.splice(k,1)
-            console.log("==========")
-            console.log()
-            console.log("==========")
             arr1.push(m)
-            console.log(arr1)
            }
             var glo=0
        function change()
@@ -292,13 +305,13 @@
                   history.go()
                }
             }
-            let o=0
+            o=0
             o=o+glo
-            let ele = arr[Math.floor(Math.random() * arr.length)]
+            ele = arr[Math.floor(Math.random() * arr.length)]
             document.getElementById("s-sec").innerHTML=ele
-            let k="slot-"+ele
+            k="slot-"+ele
             document.getElementById(k).style.backgroundColor="green"
-            let c="chk-slot-"+o
+            c="chk-slot-"+o
             document.getElementById(c).innerHTML=ele
             document.getElementById(c).style.backgroundColor="green"
             document.getElementById(c).style.height="47px";
