@@ -271,13 +271,8 @@
            function remove(ele)
            {
             let k=arr.indexOf(ele)
-            console.log(k)
             let m=arr.splice(k,1)
-            console.log("==========")
-            console.log()
-            console.log("==========")
             arr1.push(m)
-            console.log(arr1)
            }
             var glo=0
        function change()
@@ -286,20 +281,30 @@
             if(arr.length==0)
             {
                alert("Game Over")
-               confirm("Are you sure want to close the game")
+               if((confirm("Are you sure want to close the game"))===true)
+               {
                history.go()
+               }
+               else
+               {
+                  document.getElementById("s-sec").innerHTML="-"   
+               }
             }
             let o=0
             o=o+glo
-            let ele = arr[Math.floor(Math.random() * arr.length)]
+            let ele
+            if(arr.length>0)
+            {
+             ele = arr[Math.floor(Math.random() * arr.length)]
             document.getElementById("s-sec").innerHTML=ele
+            }
             let k="slot-"+ele
             document.getElementById(k).style.backgroundColor="green"
             let c="chk-slot-"+o
             document.getElementById(c).innerHTML=ele
             document.getElementById(c).style.backgroundColor="green"
             document.getElementById(c).style.height="47px";
-            document.getElementById(c).style.width="51px";
+            document.getElementById(c).style.width="50px";
             remove(ele)
          }
          function count()
