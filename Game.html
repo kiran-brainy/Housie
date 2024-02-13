@@ -5,6 +5,7 @@
         <title>Game</title>
     </head>
     <body>
+      <center><h1>𝐇𝐨𝐮𝐬𝐢𝐞</h1></center>
       <div id="marq">
          <marquee scrollamount="12" behavior="alternate" hspace="2%">Game Ended</marquee>
       </div>
@@ -18,8 +19,9 @@
             </div>
             <div class="buttons">
            <input type="button" value="Next" id="b1" onclick="change()">
-           <input type="button" value="Undo" id="b2" onclick="create()">
-            </div>
+           <input type="button" value="Undo" id="b2" onclick="undo()">
+           <input type="button" value="Reset" id="b3" onclick="reset()">
+         </div>
          </div>
       </div>
         <div class="box">
@@ -263,7 +265,23 @@
          <script>
            let arr=new Array()
            let arr1=new Array()
+           let arr2=new Array()
+           let t
+           let ele
            window.onload=myarray()
+           function undo()
+           {
+               let u=arr2.pop()
+               let q=arr1.pop()
+               arr.splice(u,0,q)
+               glo=glo-1
+               let len=(arr1.length)+1
+               let dow="chk-slot-"+len
+               let up="slot-"+q
+               document.getElementById(dow).style.backgroundColor="transparent"
+               document.getElementById(up).style.backgroundColor="transparent"
+               document.getElementById(dow).innerHTML=" "
+           }
            function myarray()
            {
             for(let i=1;i<=100;i++)
@@ -273,9 +291,10 @@
            }
            function remove(ele)
            {
-            let k=arr.indexOf(ele)
-            let m=arr.splice(k,1)
+            t=arr.indexOf(ele)
+            let m=arr.splice(t,1)
             arr1.push(m)
+            arr2.push(t)
            }
             var glo=0
        function change()
@@ -296,7 +315,6 @@
             }
             let o=0
             o=o+glo
-            let ele
             if(arr.length>0)
             {
              ele = arr[Math.floor(Math.random() * arr.length)]
@@ -314,6 +332,10 @@
          function count()
          {
             glo=glo+1;
+         }
+         function reset()
+         {
+            history.go()
          }
        </script>
      </body>
