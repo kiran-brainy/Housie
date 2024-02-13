@@ -5,6 +5,9 @@
         <title>Game</title>
     </head>
     <body>
+      <div id="marq">
+         <marquee scrollamount="15" behavior="alternate" hspace="2%">Game Ended</marquee>
+      </div>
       <div class="sec">
          <div class="round">
             <div id="s-main">
@@ -287,7 +290,8 @@
                }
                else
                {
-                  document.getElementById("s-sec").innerHTML="-"   
+                  document.getElementById("s-sec").innerHTML="-"
+                  document.getElementById("marq").style.visibility="visible"      
                }
             }
             let o=0

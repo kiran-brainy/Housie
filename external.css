@@ -85,3 +85,11 @@ td[id^="chk-slot"]
 .buttons{
     position: relative;
 }
+#marq{
+    position: relative;
+    font-size: 40px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    top:50px;
+    visibility: hidden;
+}
